@@ -13,6 +13,8 @@ RUN apt-get install -y \
   lsb-release \
   wget \
   software-properties-common
+  
+RUN git config --global --add safe.directory '*'
 
 RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)" && \
   apt-get update && \
