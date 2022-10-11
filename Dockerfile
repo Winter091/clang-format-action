@@ -14,7 +14,7 @@ RUN apt-get install -y \
   wget \
   software-properties-common
   
-RUN git config --global --add safe.directory '*'
+RUN git config --global --add safe.directory /github/workspace
 
 RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)" && \
   apt-get update && \
